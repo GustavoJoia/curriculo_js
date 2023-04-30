@@ -5,8 +5,9 @@ let tags = ['main', 'sidebar', 'aside', 'div','div'
 ,'div','h2','p','div','h2','p','section','div','p'
 ,'div','div','div','h2','li','span','p','p','div','div'
 ,'div','h2','li','span','p','div','h2','li','span','p'
-,'div','div','div','div','p','li','span','div','p','li'
-,'span','div','p','p','p','div','div','div','p','div','p']
+,'div','div','div','p','li','span','div','p','li'
+,'span','div','div','p','p','p','div','div','div','h2'
+,'li','span','p','div','h2','li','span','p']
 let elements = []
 
 tags.forEach(tag =>{
@@ -193,16 +194,89 @@ elements[52].classList.add('desc__base','topicos')
 //div org__data
 addChild(elements[52],elements[53])
 elements[53].classList.add('org__data')
-//p
+//p__desc
 addChild(elements[53],elements[54])
 elements[54].classList.add('p__desc')
 elements[54].textContent = 'Inglês'
 //li
 addChild(elements[53],elements[55])
-//span
+//span p__desc
 addChild(elements[55],elements[56])
 elements[56].classList.add('p__desc')
-elements[56].textContent = 'Intermediario'
+elements[56].textContent = 'Intermediário'
+
+//div org__data
+addChild(elements[52],elements[57])
+elements[57].classList.add('org__data')
+//p__desc
+addChild(elements[57],elements[58])
+elements[58].classList.add('p__desc')
+elements[58].textContent = 'Espanhol'
+//li
+addChild(elements[57],elements[59])
+//span p__desc
+addChild(elements[59],elements[60])
+elements[60].classList.add('p__desc')
+elements[60].textContent = 'Avançado'
+
+//divisoria
+addChild(elements[28],elements[61])
+elements[61].classList.add('divisoria')
+
+//div desc__base topicos
+addChild(elements[28],elements[62])
+elements[62].classList.add('desc__base','topicos')
+//p__desc 1
+addChild(elements[62],elements[63])
+elements[63].classList.add('p__desc')
+elements[63].textContent = 'Habilidade'
+//p__desc 2
+addChild(elements[62],elements[64])
+elements[64].classList.add('p__desc')
+elements[64].textContent = 'Outra habilidade'
+//p__desc 3
+addChild(elements[62],elements[65])
+elements[65].classList.add('p__desc')
+elements[65].textContent = 'Mais uma, coisa de maluco'
+
+//divisoria
+addChild(elements[28],elements[66])
+elements[66].classList.add('divisoria')
+
+//div desc__base
+addChild(elements[28],elements[67])
+elements[67].classList.add('desc__base')
+//div org__data
+addChild(elements[67],elements[68])
+elements[68].classList.add('org__data')
+//h2
+addChild(elements[68],elements[69])
+elements[69].textContent = 'Técnologia da Informação'
+//li
+addChild(elements[68],elements[70])
+//span
+addChild(elements[70],elements[71])
+elements[71].textContent = '(01/2016 - 12/2019)'
+//p__desc
+addChild(elements[67],elements[72])
+elements[72].classList.add('p__desc')
+elements[72].textContent = 'EE Sítio das Laranjeiras'
+
+//div org__data
+addChild(elements[67],elements[73])
+elements[73].classList.add('org__data')
+//h2
+addChild(elements[73],elements[74])
+elements[74].textContent = 'Sistemas Embarcados'
+//li
+addChild(elements[73],elements[75])
+//span
+addChild(elements[75],elements[76])
+elements[76].textContent = '(01/2016 - 12/2019)'
+//p__desc
+addChild(elements[67],elements[77])
+elements[77].classList.add('p__desc')
+elements[77].textContent = 'EE Sítio das Laranjeiras'
 
 function criarTag(tag){
     let n_tag = document.createElement(tag)
