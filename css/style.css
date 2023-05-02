@@ -86,6 +86,10 @@ body{
     padding-left: 2vw;
 }
 
+.nome__h1{
+    text-transform: uppercase;
+}
+
 .info__section h1, p{
     color: #fff;
 }
@@ -121,7 +125,6 @@ body{
     width: 72%;
     border-radius: 34%;
     transform: rotate(45deg);
-    background-image: url();
     margin-left: 25px;
 }
 
