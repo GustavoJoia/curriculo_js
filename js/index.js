@@ -28,13 +28,14 @@ console.log(elements)
 //botão imprimir
 let imprimir = document.createElement('button')
 imprimir.textContent = 'IMPRIMIR'
+imprimir.id = 'imprimiuSaiu'
 imprimir.onclick=()=>{
-    impressao()
+    impressao(elements[0])
 }
 
 let jsPDF = document.createElement('script')
 jsPDF.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js'
-addChild(body,jsPDF)
+addChild(document.head,jsPDF)
 
 //Main
 addChild(body, elements[0])
@@ -236,6 +237,7 @@ elements[47].textContent = 'Adicionar'
 elements[47].onclick =()=>{
     cloneExp([elements[41],elements[45]],elements[46])
 }
+elements[47].id = 'imprimiuSaiu'
 //elements[47].style.display = 'none'
 /*
 addChild(elements[46],elements[48])
@@ -282,6 +284,7 @@ elements[57].classList.add('org__data')
 addChild(elements[57],elements[58])
 elements[58].classList.add('p__desc')
 elements[58].textContent = 'Adicionar'
+elements[58].id = 'imprimiuSaiu'
 elements[58].onclick =()=>{
     cloneIdioma(elements[53],elements[57])
 }
@@ -345,6 +348,7 @@ elements[73].classList.add('org__data')
 //h2
 addChild(elements[73],elements[74])
 elements[74].textContent = 'Adicionar'
+elements[74].id = 'imprimiuSaiu'
 elements[74].onclick=()=>{
     cloneCurso([elements[68],elements[72]],elements[73])
 }
