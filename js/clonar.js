@@ -8,21 +8,21 @@ export function cloneExp(elements,before){
     let div = criar(t1.tagName)
     div.classList.add(t1.classList)
 
-    console.log(div)
+    //console.log(div)
 
     let t2 = elements[1]
     let p = criar(t2.tagName)
-    p.textContent = t2.textContent
+    p.textContent = '[ Nome da Empresa ]'
     p.classList.add(t2.classList)
-    p.ondblclick=()=>{
+    p.onclick=()=>{
        inserir(p,mainParent,'input','text','outro',before)
     }
 
     let child = elements[0].children
     let h2 = child[0]
     let nh2 = criar(h2.tagName)
-    nh2.textContent = h2.textContent
-    nh2.ondblclick=()=>{
+    nh2.textContent = '[ Sua experiência ]'
+    nh2.onclick=()=>{
         inserir(nh2,div,'input','text','first')
     }
 
@@ -30,8 +30,8 @@ export function cloneExp(elements,before){
     let nli = criar(li.tagName)
     let span = li.children[0]
     let nspan = criar(span.tagName)
-    nspan.textContent = span.textContent
-    nspan.ondblclick=()=>{
+    nspan.textContent = '([Mês/Ano] - [Mês/Ano])'
+    nspan.onclick=()=>{
         inserir(nspan,nli,'input','text')
     }
     
@@ -54,8 +54,8 @@ export function cloneIdioma(elements,before){
     let p = elements.children[0]
     let np = criarTag(p.tagName)
     np.classList.add(p.classList)
-    np.textContent = p.textContent
-    np.ondblclick=()=>{
+    np.textContent = '[ Idioma ]'
+    np.onclick=()=>{
         inserir(np,div,'input','text','first')
     }
 
@@ -65,8 +65,8 @@ export function cloneIdioma(elements,before){
     let span = li.children[0]
     let nspan = criarTag(span.tagName)
     nspan.classList.add(span.classList)
-    nspan.textContent = span.textContent
-    nspan.ondblclick=()=>{
+    nspan.textContent = '[ Nível ]'
+    nspan.onclick=()=>{
         inserir(nspan,nli,'input','text')
     }
     addChild(nli,nspan)
@@ -87,17 +87,17 @@ export function cloneCurso(elements,before){
 
     let t2 = elements[1]
     let p = criar(t2.tagName)
-    p.textContent = t2.textContent
+    p.textContent = '[ Nome da instituição ]'
     p.classList.add(t2.classList)
-    p.ondblclick=()=>{
+    p.onclick=()=>{
        inserir(p,mainParent,'input','text','outro',before)
     }
 
     let child = elements[0].children
     let h2 = child[0]
     let nh2 = criar(h2.tagName)
-    nh2.textContent = h2.textContent
-    nh2.ondblclick=()=>{
+    nh2.textContent = '[ Nome do curso ]'
+    nh2.onclick=()=>{
         inserir(nh2,div,'input','text','first')
     }
 
@@ -105,8 +105,8 @@ export function cloneCurso(elements,before){
     let nli = criar(li.tagName)
     let span = li.children[0]
     let nspan = criar(span.tagName)
-    nspan.textContent = span.textContent
-    nspan.ondblclick=()=>{
+    nspan.textContent = '([Mês/Ano] - [Mês/Ano])'
+    nspan.onclick=()=>{
         inserir(nspan,nli,'input','text')
     }
     

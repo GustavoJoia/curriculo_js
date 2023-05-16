@@ -20,14 +20,63 @@ export default function gerarObjeto(){
     let formacao = formaEscola +' '+formaPeriodo+' '+formaGrau+' '+formaAdd
     
     let experiencias = descBase[2].children
+    let xp = []
 
-    for (let index = 0; index < experiencias.length; index++) {
+    for (let index = 0; index < (experiencias.length-1); index++) {
 
-        
+        let atual = experiencias[index]
+
+        if(atual.tagName == 'DIV'){
+            let exp = atual.children[0].textContent
+            let duracao = atual.children[1].children[0].textContent
+            xp.push(exp,duracao)
+        } else if(atual.tagName == 'P'){
+            let inst = atual.textContent
+            xp.push(inst)
+        }
         
     }
 
-    let idiomas = []
+    let exp = []
+
+    for (let index = 1; index <= xp.length; index++) {
+        
+        if(index%3 != 0){
+            continue
+        } else {
+            let str_xp = xp[(index-2)]+'|'+xp[(index-1)]+'|'+xp[index]+';'
+            exp.push(str_xp)
+        }
+        
+    }
+
+    let idiomas = descBase[3].children
+    let idi = []
+
+    for (let index = 0; index < (idiomas.length-1); index++) {
+        
+        let atual = idiomas[index]
+
+        let lingua = atual.children[0].textContent
+        let nivel = atual.children[1].children[0].textContent
+
+        idi.push(lingua,nivel)
+        
+    }
+
+    let falados = []
+
+    for (let index = 1; index <= falados.length; index++) {
+        
+        if(index%2 != 0){
+            continue
+        } else {
+            let str_idi = idi[(index-1)]+'|'+idi[index]+';'
+            falados.push(str_idi)
+        }
+        
+    }
+
     let adicionais = descBase[4].children[0].textContent
     let cursos = []
 
@@ -40,7 +89,8 @@ export default function gerarObjeto(){
         endereco: ender,
         objetivo: objetivo,
         formacao: formacao,
-
+        experiencias: exp,
+        idiomas: falados,
         adicionais: adicionais
     }
 

@@ -32,7 +32,7 @@ imprimir.classList.add('btn__print')
 imprimir.textContent = 'IMPRIMIR'
 
 imprimir.onclick=()=>{
-    console.log(gerarObjeto())
+    gerarObjeto()
     impressao(elements[1],navElements[0],imprimir)
 }
 
@@ -201,7 +201,7 @@ elements[29].classList.add('desc__base')
 //p__desc
 addChild(elements[29],elements[30])
 elements[30].classList.add('p__desc')
-elements[30].textContent = '[ Descreva aqui um resumo sobre você, seus bons atributos, tudo o que achar pertinente (com atenção às redundâncias!) ]'
+elements[30].textContent = '[ Descreva aqui um resumo sobre o que você deseja, seus objetivos e metas, tudo o que achar pertinente (com atenção às redundâncias!) ]'
 elements[30].onclick=()=>{
     inserir(elements[30],elements[29],'textarea')
 }
