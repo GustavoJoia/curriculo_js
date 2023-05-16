@@ -9,7 +9,7 @@ export default function imprimir(section, nav, btn){
         b.style.display = 'none'
     })
 
-    //print()
+    print()
     nav.style.display = 'flex'
     btn.style.display = 'block'
     section.style.marginTop = '8vh'
