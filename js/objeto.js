@@ -78,7 +78,36 @@ export default function gerarObjeto(){
     }
 
     let adicionais = descBase[4].children[0].textContent
-    let cursos = []
+
+    let cursos = descBase[5].children
+    let cc = []
+
+    for (let index = 0; index < (cursos.length-1); index++) {
+
+        let atual = cursos[index]
+        if(atual.tagName == 'DIV'){
+            let nomeCurso = atual.children[0].textContent
+            let duracao = atual.children[1].children[0].textContent
+            cc.push(nomeCurso,duracao)
+        } else if(atual.tagName == 'P'){
+            let inst = atual.textContent
+            cc.push(inst)
+        }
+        
+    }
+
+    let cursou = []
+
+    for (let index = 1; index <= cc.length; index++) {
+        
+        if(index%3 != 0){
+            continue
+        } else {
+            let str_cc = cc[(index-3)]+'|'+cc[(index-2)]+'|'+cc[(index-1)]+';'
+            cursou.push(str_cc)
+        }
+        
+    }
 
     let objeto = {
         nome: nome,
@@ -91,6 +120,7 @@ export default function gerarObjeto(){
         formacao: formacao,
         experiencias: exp,
         idiomas: falados,
+        cursos: cursou,
         adicionais: adicionais
     }
 

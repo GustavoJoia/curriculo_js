@@ -8,8 +8,6 @@ export function cloneExp(elements,before){
     let div = criar(t1.tagName)
     div.classList.add(t1.classList)
 
-    //console.log(div)
-
     let t2 = elements[1]
     let p = criar(t2.tagName)
     p.textContent = '[ Nome da Empresa ]'
@@ -72,7 +70,6 @@ export function cloneIdioma(elements,before){
     addChild(nli,nspan)
     addChild(div,np)
     addChild(div,nli)
-    console.log(mainParent,div,before)
     addBefore(mainParent,div,before)
 
 }
@@ -82,8 +79,6 @@ export function cloneCurso(elements,before){
     let mainParent = t1.parentNode
     let div = criar(t1.tagName)
     div.classList.add(t1.classList)
-
-    console.log(div)
 
     let t2 = elements[1]
     let p = criar(t2.tagName)
