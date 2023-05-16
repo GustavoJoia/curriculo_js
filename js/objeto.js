@@ -19,7 +19,14 @@ export default function gerarObjeto(){
     let formaAdd = formaDados[2].textContent
     let formacao = formaEscola +' '+formaPeriodo+' '+formaGrau+' '+formaAdd
     
-    let experiencias = []
+    let experiencias = descBase[2].children
+
+    for (let index = 0; index < experiencias.length; index++) {
+
+        
+        
+    }
+
     let idiomas = []
     let adicionais = descBase[4].children[0].textContent
     let cursos = []
