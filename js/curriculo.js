@@ -33,7 +33,12 @@ imprimir.textContent = 'IMPRIMIR'
 
 imprimir.onclick=()=>{
     gerarObjeto()
-    impressao(elements[1],navElements[0],imprimir)
+    let botoes = [
+        elements[47],
+        elements[58],
+        elements[74]
+    ]
+    impressao(elements[1],navElements[0],imprimir, botoes)
 }
 
 
