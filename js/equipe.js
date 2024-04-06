@@ -128,7 +128,7 @@ addChild(infoElements[8], infoElements[10])
 infoElements[10].classList.add('texto-info')
 
 addChild(infoElements[10], infoElements[11])
-infoElements[11].href = "github.com/luanagbrm"
+infoElements[11].href = "https://github.com/luanagbrm"
 infoElements[11].textContent = "@luanagbrm"
 
 // card - gustavo
@@ -158,7 +158,7 @@ infoElements[18].textContent = "Idade:"
 
 addChild(infoElements[17], infoElements[19])
 infoElements[19].classList.add('texto-info')
-infoElements[19].textContent = "17 anos"
+infoElements[19].textContent = "18 anos"
 
 addChild(infoElements[16], infoElements[20])
 infoElements[20].classList.add('row-org')
@@ -171,6 +171,6 @@ addChild(infoElements[20], infoElements[22])
 infoElements[22].classList.add('texto-info')
 
 addChild(infoElements[22], infoElements[23])
-infoElements[23].href = "github.com/GustavoJoia"
+infoElements[23].href = "https://github.com/GustavoJoia"
 infoElements[23].textContent = "@GustavoJoia"
 
